@@ -136,6 +136,7 @@ body {
   margin-bottom: 10px;
   position: relative;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 .text .question::after {
   content: url(../images/icon-arrow-down.svg);
@@ -165,4 +166,16 @@ body {
 }
 .text .question.open + .answer {
   display: block;
+  transition: all 0.3s;
+  animation: opa 0.5s ease;
+}
+@keyframes opa {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
